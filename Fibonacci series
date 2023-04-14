@@ -1,0 +1,18 @@
+def fibonacci(n):
+    # initialize variables
+    fib1 = 0
+    fib2 = 1
+    
+    # check input
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return fib1
+    elif n == 1:
+        return fib2
+    else:
+        for i in range(2, n+1):
+            fib3 = fib1 + fib2
+            fib1 = fib2
+            fib2 = fib3
+        return fib2

@@ -1,0 +1,10 @@
+#To print Emojis
+print("\U0001F600 \n \U0001F601")
+#smile Emojis
+print("\U0001F602 \n \U0001F605")
+
+print("\U0001F607 \n \U0001F709")
+
+print("\U0001F910 \n \U0001F911")
+
+print("\U0001F722 \n \U0001F934")

@@ -1,0 +1,39 @@
+#To find what type of 2D figure can be formed with th help of no of dimensions 
+a = input("Enter the Dimensions: ")
+dimensions = list(map(int, a.split()))
+
+#Rectangle
+if len(dimensions) == 2:
+    length, breadth = dimensions
+    area = length * breadth
+    print("Rectangle can be formed")
+    print("Area of the rectangle is:", area)
+
+#Triangle 
+elif len(dimensions) == 3:
+    a, b, c = sorted(dimensions)
+    if a + b > c:
+        s = (a + b + c) / 2
+        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+        print("Triangle can be formed")
+        print("Area of the triangle is:", area)
+    else:
+        print("Triangle cannot be formed")
+
+#Quadrilateral
+elif len(dimensions) == 4:
+    a, b, c, d = sorted(dimensions)
+    if a == b and c == d:
+        area = a * c
+        print("Square can be formed")
+        print("Area of the square is:", area)
+    elif a == b and c != d or a != b and c == d:
+        area = a * c
+        print("Rectangle can be formed")
+        print("Area of the rectangle is:", area)
+    else:
+        print("Quadrilateral can be formed")
+        print("Quadrilateral may be parallelogram or trapezium")
+        print("Area of Qualidrilateral requires diagonal dimensions")
+else:
+    print("Invalid input")

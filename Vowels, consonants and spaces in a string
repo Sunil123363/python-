@@ -1,0 +1,17 @@
+string = input("Enter a string: ")
+#initially 
+vowels = 0
+consonants = 0
+blanks = 0
+
+for char in string:
+    if char in 'aeiou':
+        vowels += 1
+    elif char.isalpha():
+        consonants += 1
+    elif char.isspace():
+        blanks += 1
+
+print("Total vowels:", vowels)
+print("Total consonants:", consonants)
+print("Total blanks:", blanks)

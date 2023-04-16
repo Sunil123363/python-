@@ -1,0 +1,14 @@
+#Swapping of numbers
+a=int(input("enter a number"))
+b=int(input("enter a number"))
+#before swap
+print("Before swapping ")
+print(a)
+print(b)
+temp=a
+a=b
+b=temp
+#After swap
+print("After Swapping")
+print(a)
+print(b)
